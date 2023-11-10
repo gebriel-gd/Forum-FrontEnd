@@ -1,6 +1,6 @@
 import React,{useContext} from "react";
 import logo from "../../assets/logo.png"; //image not being recognized
-// import bg from "../../assets/bg.svg"
+import bg from "../../assets/bg.svg"
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
 
@@ -57,12 +57,12 @@ const logout = () => {
                 {/* Add Link to Home */}
               </li>
               <li className="nav-item align-items-center d-flex">
-                <a className="nav-link" href="">
+                <a className="nav-link" href="#">
                   How it works
                 </a>
               </li>
               <li className="nav-item align-items-center">
-                <a className="nav-link" href="">
+                <a className="nav-link" href="#">
                   {userData.user ? (
                     <button
                       onClick={logout}

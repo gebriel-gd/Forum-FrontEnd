@@ -7,7 +7,7 @@ import axiosInstance from "./Pages/axioConfig/axioConfig";
 import AskQuestion from "./Components/AskQuestion/AskQuestion";
 import QuestionAndAnswer from "./Components/QuestionAndAnswer/QuestionAndAnswer";
 import Login from "./Pages/Login/Login";
-// import Question from "./Components/Question/Question";
+import Question from "./Components/Question/Question";
 
 function App() {
   const [userData, setUserData] = useContext(UserContext);

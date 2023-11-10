@@ -1,7 +1,7 @@
 
 import React from "react";
 import { LiaUserCircle, LiaAngleRightSolid } from "react-icons/lia";
-import { Link } from "react-router-dom";
+import { Navigate, useNavigate, Link } from "react-router-dom";
 
 
 const Question = ({firstName,lastName,question}) => {
