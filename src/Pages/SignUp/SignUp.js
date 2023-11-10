@@ -15,9 +15,9 @@ const SignUp = ({ setCurrentPage }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:4000/api/users", form);
+      await axios.post(`${process.env.REACT_APP_base_url}/api/users`, form);
       const loginRes = await axios.post(
-        "http://localhost:4000/api/users/login",
+        `${process.env.REACT_APP_base_url}/api/users/login`,
         {
           email: form.email,
           password: form.password,
