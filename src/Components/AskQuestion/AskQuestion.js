@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 import Header from "../Header/Header";
 import axiosInstance from "../../Pages/axioConfig/axioConfig";
 import { UserContext } from "../../context/UserContext";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const AskQuestion = () => {
   const [form, setForm] = useState({

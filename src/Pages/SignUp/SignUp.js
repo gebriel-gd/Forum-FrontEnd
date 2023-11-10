@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
 import axios from "axios";
 
@@ -56,7 +56,7 @@ const SignUp = ({ setCurrentPage }) => {
            Sign in
          </Link> */}
          <a
-           href="#"
+           href=""
            onClick={() => setCurrentPage("login")}
            className="fw-semibold text-decoration-none text-warning"
          >
@@ -119,7 +119,7 @@ const SignUp = ({ setCurrentPage }) => {
          <div className="mt-3">
            <p className="d-flex justify-content-center">
              <a
-               href="#"
+               href=""
                onClick={() => setCurrentPage("login")}
                className="fw-semibold text-decoration-none text-warning"
              >

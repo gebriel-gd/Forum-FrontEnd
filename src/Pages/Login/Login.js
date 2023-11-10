@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../context/UserContext";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Login = ({ setCurrentPage }) => {
@@ -55,7 +55,7 @@ const Login = ({ setCurrentPage }) => {
             Create a new account
           </Link> */}
           <a
-            href="#"
+            href=""
             onClick={() => setCurrentPage("signup")}
             className="fw-semibold text-decoration-none text-warning"
           >
