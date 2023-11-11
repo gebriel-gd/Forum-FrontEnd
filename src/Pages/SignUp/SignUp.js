@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
 import axios from "axios";
+import axiosInstance from "../axioConfig/axioConfig";
+// require("dotenv").config()
 
 const SignUp = ({ setCurrentPage }) => {
   const [form, setForm] = useState({});
@@ -15,9 +17,9 @@ const SignUp = ({ setCurrentPage }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`${process.env.REACT_APP_base_url}/api/users`, form);
-      const loginRes = await axios.post(
-        `${process.env.REACT_APP_base_url}/api/users/login`,
+      await axiosInstance.post("", form);
+      const loginRes = await axiosInstance.post(
+        "/login",
         {
           email: form.email,
           password: form.password,

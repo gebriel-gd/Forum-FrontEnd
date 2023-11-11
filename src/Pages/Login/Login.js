@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../context/UserContext";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import axiosInstance from "../axioConfig/axioConfig";
+// require("dotenv").config();
 
 const Login = ({ setCurrentPage }) => {
   const [userData, setUserData] = useContext(UserContext);
@@ -15,8 +17,8 @@ const Login = ({ setCurrentPage }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const loginRes = await axios.post(
-        `${process.env.REACT_APP_base_url}/api/users/login`,
+      const loginRes = await axiosInstance.post(
+        "/login",
         {
           email: form.email,
           password: form.password,
